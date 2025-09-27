@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us - The Stripped Umbrella</title>
+    <meta name="author" content="MariaSegura">
+    <meta name="description" content="Contact page of The Stripped Umbrella Spa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Banner -->
+            <img src="assets/images/su_banner.gif" alt="The Stripped Umbrella Banner">
+
+            <!-- Navigation -->
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <!-- Heading -->
+            <h2>Contact Us:</h2>
+
+            <!-- Form -->
+            <form action="#" method="post">
+                <!-- Fieldset 1 -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="firstName">First Name:* </label>
+                    <input type="text" id="firstName" name="firstName" maxlength="25" required><br><br>
+
+                    <label for="lastName">Last Name:* </label>
+                    <input type="text" id="lastName" name="lastName" maxlength="25" required><br><br>
+
+                    <label for="email">Email:* </label>
+                    <input type="email" id="email" name="email" maxlength="35" required><br><br>
+
+                    <p>Please select the music genre(s) that you like:</p>
+                    <input type="checkbox" id="classic" name="music" value="Classic">
+                    <label for="classic">Classic</label><br>
+
+                    <input type="checkbox" id="jazz" name="music" value="Jazz">
+                    <label for="jazz">Jazz</label><br>
+
+                    <input type="checkbox" id="blues" name="music" value="Blues">
+                    <label for="blues">Blues</label><br>
+
+                    <input type="checkbox" id="instrumental" name="music" value="Instrumental">
+                    <label for="instrumental">Instrumental</label><br>
+
+                    <input type="checkbox" id="banda" name="music" value="Banda">
+                    <label for="banda">Banda</label><br>
+
+                    <input type="checkbox" id="cumbia" name="music" value="Cumbia">
+                    <label for="cumbia">Cumbia</label><br>
+
+                    <input type="checkbox" id="salsa" name="music" value="Salsa">
+                    <label for="salsa">Salsa</label><br>
+
+                    <input type="checkbox" id="regueton" name="music" value="Regueton">
+                    <label for="regueton">Reguetón</label><br>
+                </fieldset>
+
+                <br>
+
+                <!-- Fieldset 2 -->
+                <fieldset>
+                    <legend>Your Message</legend>
+
+                    <!-- How did you hear about us? -->
+                    <label for="how">How did you hear about us?</label><br>
+                    <select id="how" name="how">
+                        <option selected>Our website</option>
+                        <option>Friends</option>
+                        <option>TV Adv.</option>
+                        <option>Other</option>
+                    </select><br><br>
+
+                    <!-- Newsletter subscription -->
+                    <p>Would you like to receive our newsletter?</p>
+                    <input type="radio" id="yes" name="newsletter" value="yes" checked>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="newsletter" value="no">
+                    <label for="no">No</label>
+                    <input type="radio"id="maybe" name="newsletter" value ="Maybe"> 
+                    <label for="maybe">Maybe</label>
+                    
+                </label><br><br>
+
+                    <!-- Your request -->
+                    <label for="message">Your request:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+
+                    <input type="checkbox" id="updates" name="updates" value="yes">
+                    <label for="updates">Sign me up for email updates</label><br><br>
+
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+
+            <br>
+
+            <!-- Google Map -->
+            <h3>Our Location:</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.713308412807!2d-79.38672012413436!3d43.66873595349479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2e0b64e1140d%3A0xd11156503e310196!2sSpa%20at%20Four%20Seasons%20Toronto!5e0!3m2!1sen!2sca!4v1695650319423!5m2!1sen!2sca"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </main>
+
+        <footer>
+– created by: MariaSegura – All rights reserved
+        </footer>
+    </div>
+</body>
+</html>
