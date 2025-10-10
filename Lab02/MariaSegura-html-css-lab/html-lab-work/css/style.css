@@ -1,0 +1,211 @@
+
+.content ul,
+.content ol {
+    margin-left: 30px;         
+    margin-top: 10px;          
+    margin-bottom: 10px;       
+}
+
+.content h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.content p {
+    margin-bottom: 10px;
+}
+
+
+/* Q0: Remove default margins and paddings from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Q1: Display HTML5 semantic elements as block (for older browsers support) */
+header, nav, main, section, article, aside, footer {
+    display: block;
+}
+
+/* Q2: Style the body element */
+body {
+    color: #412B19; /* Text color */
+    background-image: url('../assets/images/dark1.jpg'); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', 'Verdana', sans-serif;
+    margin: 0;
+}
+
+/* Q3: Style the <div> with class 'container' */
+.container {
+    width: 950px;
+    margin: 5px auto; 
+    background-color: #DEB887; 
+}
+
+/* Q4: Style elements with class 'content' */
+.content {
+    line-height: 1.4em;
+    padding: 10px;
+}
+
+/* Q5: Style header, nav, and footer elements */
+header, nav, footer {
+    background-color: #0097d3; 
+    color: #f0f0f0; 
+}
+
+/* Q6: Style <ul> inside any <nav> */
+nav ul {
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+}
+
+/* Q7: Style <li> inside <nav> (main navigation list items) */
+nav ul li {
+    display: inline-block;
+    margin-right: 40px;
+    text-transform: uppercase;
+}
+
+/* Q8: Style navigation links with pseudo-classes */
+nav ul li a:link {
+    color: #a6ccf4;
+}
+nav ul li a:visited {
+    color: #ffffff;
+}
+nav ul li a:hover {
+    color: #ffa600;
+}
+nav ul li a:active {
+    color: #e9ded0;
+}
+
+/* Q9: Style all anchor <a> elements */
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Q10: Style h1, h2, h3 headings */
+h1, h2, h3 {
+    margin: 10px;
+    text-transform: uppercase;
+    color: #ffe680;
+}
+
+/* Q11: Style the image with class 'img-centre' (only in index.html) */
+.img-centre {
+    display: block; 
+    margin: 5px auto; 
+    padding: 2px;
+}
+
+/* Q12: Center <audio> and <video> elements */
+audio, video {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Q13: Style <table> */
+table {
+    width: 800px;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+/* Q14: Style <th> and <td> */
+th, td {
+    border: 1px solid #b68f58;
+    padding: 2px 5px;
+    background-color: #f1d7b5;
+}
+
+/* Q15: <th> and <tfoot> <td> styles */
+th, tfoot td {
+    text-transform: uppercase;
+    background-color: #8b6e3b;
+    color: white;
+}
+
+/* Q16: Style <dt> */
+dt {
+    font-weight: bold;
+}
+
+/* Q17: Style <footer> */
+footer {
+    font-size: 80%;
+    text-align: center;
+    padding: 1px 0;
+}
+
+/* Q18: Style <iframe> */
+iframe {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Q19: Style <fieldset> */
+fieldset {
+    width: 500px;
+    margin: 20px auto;
+    border: 2px solid #b68f58;
+    background-color: #f3d9b5;
+    padding: 10px;
+}
+
+/* Q20: Style <legend> */
+legend {
+    font-style: italic;
+    background-color: #c18e4d;
+    color: #ffffff;
+    padding: 0 5px;
+    margin: 0 10px;
+    border-radius: 8px;
+}
+
+
+/* Q21: Style <input type="submit"> */
+input[type="submit"] {
+    border: 1px solid #ffffff;
+    padding: 5px;
+    background-color: #b68f58;
+    color: #fff;
+}
+
+/* Q22: Style <input type="submit"> when hovered */
+input[type="submit"]:hover {
+    background-color: #ffcc00;
+    color: #412B19;
+    cursor: pointer;
+}
+
+/* Extra: Styling for form input fields (not part of Q1-Q22, for better design) */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  
+    color: #412B19;
+}
+
+/* Extra: Custom checkbox and radio styles */
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: #daa520; /* Goldenrod color */
+}
+
+/* Extra: Custom style for <select> and selected <option> */
+select {
+    background-color: #fdf6ec;
+    color: #333;
+}
+
+
