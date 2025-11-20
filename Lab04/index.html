@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Geometry</title>
+
+<!-- ======================= INTERNAL CSS ======================= -->
+<style>
+
+    /* ===== GLOBAL LAYOUT ===== */
+    body {
+        margin: 0;
+        font-family: 'Georgia', serif;
+        background: linear-gradient(180deg, #0b0b0b 0%, #151515 100%);
+        color: #c4a962;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+        background: linear-gradient(90deg, #1c1c1c, #3a3a3a);
+        color: #bfa76f;
+        text-align: center;
+        padding: 25px 0;
+        box-shadow: 0 0 25px rgba(191,167,111,0.3);
+        margin-bottom: 30px;
+    }
+
+    header h1 {
+        font-size: 40px;
+        letter-spacing: 1px;
+        text-shadow:
+            2px 2px 3px #000,
+            0 0 8px rgba(191,167,111,0.4),
+            0 0 15px rgba(191,167,111,0.3);
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #d4c080;
+        font-weight: bold;
+        transition: 0.3s;
+        font-size: 18px;
+    }
+
+    nav ul li a:hover {
+        color: #fff5cc;
+        text-shadow: 0 0 8px rgba(212,192,128,0.8);
+    }
+
+    /* ===== MAIN CONTAINER ===== */
+    #main-container {
+        width: 70%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+        background-color: #1a1a1a;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(191,167,111,0.2);
+        margin: 40px auto;
+        width: 65%;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 32px;
+        color: #bfa76f;
+        text-shadow:
+            2px 2px 3px #000,
+            0 0 10px rgba(191,167,111,0.5),
+            0 0 20px rgba(191,167,111,0.4);
+    }
+
+    /* ===== FORM FIELDS ===== */
+    label {
+        font-size: 16px;
+        color: #d2b76c;
+        display: block;
+        margin: 10px 0 6px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #bfa76f;
+        background-color: #222;
+        color: #bfa76f;
+        outline: none;
+    }
+
+    input:focus {
+        border-color: #d4c080;
+        box-shadow: 0 0 10px rgba(191,167,111,0.5);
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #444;
+        margin-top: 15px;
+    }
+
+    /* ===== BUTTONS ===== */
+    button {
+        padding: 14px 20px;
+        font-size: 17px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        background-color: #bfa76f;
+        color: #111;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    button:hover {
+        background-color: #d4c080;
+        transform: scale(1.05);
+    }
+
+    /* ===== GO TO TOP LINK ===== */
+    .go {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .go a {
+        color: #d4c080;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .go a:hover {
+        text-shadow: 0 0 8px rgba(212,192,128,0.8);
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1 id="top">Basic Geometry</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#circle">Circle</a></li>
+            <li><a href="#triangle">Triangle</a></li>
+            <li><a href="#square">Square</a></li>
+            <li><a href="#rectangle">Rectangle</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="main-container">
+
+    <p style="text-align:center;">In this section, we are going to find the area of some two-dimensional shapes.</p>
+    <p style="text-align:center;">Click on any shape above.</p>
+
+
+    <!-- ============ CIRCLE SECTION ============ -->
+    <section id="circle">
+        <h2>Circle Area</h2>
+
+        <label for="radius">Enter the value of the circle's radius:</label>
+        <input type="text" id="radius">
+
+        <label for="circle-area">Result:</label>
+        <input type="text" id="circle-area" readonly>
+        <hr>
+
+        <button onclick="getCircleArea()">Calculate</button>
+
+        <div class="go"><a href="#top">Go to Top</a></div>
+    </section>
+
+    <!-- ============ TRIANGLE SECTION ============ -->
+    <section id="triangle">
+        <h2>Triangle Area</h2>
+
+        <label for="triangle-base">Enter the triangle's base:</label>
+        <input type="text" id="triangle-base">
+
+        <label for="triangle-height">Enter the triangle's vertical height:</label>
+        <input type="text" id="triangle-height">
+
+        <label for="triangle-area">Result:</label>
+        <input type="text" id="triangle-area" readonly>
+        <hr>
+
+        <button onclick="getTriangleArea()">Calculate</button>
+
+        <div class="go"><a href="#top">Go to Top</a></div>
+    </section>
+
+    <!-- ============ SQUARE SECTION ============ -->
+    <section id="square">
+        <h2>Square Area</h2>
+
+        <label for="square-side">Enter the square's side length:</label>
+        <input type="text" id="square-side">
+
+        <label for="square-area">Result:</label>
+        <input type="text" id="square-area" readonly>
+        <hr>
+
+        <button onclick="getSquareArea()">Calculate</button>
+
+        <div class="go"><a href="#top">Go to Top</a></div>
+    </section>
+
+    <!-- ============ RECTANGLE SECTION ============ -->
+    <section id="rectangle">
+        <h2>Rectangle Area</h2>
+
+        <label for="rect-width">Enter the rectangle's width:</label>
+        <input type="text" id="rect-width">
+
+        <label for="rect-height">Enter the rectangle's height:</label>
+        <input type="text" id="rect-height">
+
+        <label for="rectangle-area">Result:</label>
+        <input type="text" id="rectangle-area" readonly>
+        <hr>
+
+        <button onclick="getRectangleArea()">Calculate</button>
+
+        <div class="go"><a href="#top">Go to Top</a></div>
+    </section>
+
+</div>
+
+<!-- ======================= INTERNAL JAVASCRIPT ======================= -->
+<script>
+
+    function getCircleArea() {
+        let radius = document.getElementById("radius").value.trim();
+        radius = Number(radius);
+        let area = Math.PI * radius * radius;
+        document.getElementById("circle-area").value = area;
+    }
+
+    function getTriangleArea() {
+        let base = document.getElementById("triangle-base").value.trim();
+        let height = document.getElementById("triangle-height").value.trim();
+        base = Number(base);
+        height = Number(height);
+        let area = 0.5 * base * height;
+        document.getElementById("triangle-area").value = area;
+    }
+
+    function getSquareArea() {
+        let side = document.getElementById("square-side").value.trim();
+        side = Number(side);
+        let area = side * side;
+        document.getElementById("square-area").value = area;
+    }
+
+    function getRectangleArea() {
+        let width = document.getElementById("rect-width").value.trim();
+        let height = document.getElementById("rect-height").value.trim();
+        width = Number(width);
+        height = Number(height);
+        let area = width * height;
+        document.getElementById("rectangle-area").value = area;
+    }
+
+</script>
+
+</body>
+</html>
